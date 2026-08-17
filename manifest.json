@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Friendify",
   "version": "1.0.0",
-  "description": "\u00d6ppnar alltid Facebook i v\u00e4nfl\u00f6det i st\u00e4llet f\u00f6r Hem.",
+  "description": "Always opens Facebook in the friends feed instead of Home.",
   "permissions": ["declarativeNetRequest", "webNavigation"],
   "host_permissions": ["*://*.facebook.com/*"],
   "icons": {
