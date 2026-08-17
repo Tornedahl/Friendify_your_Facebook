@@ -1,8 +1,8 @@
-// Ändra denna om vänflödets URL visar sig vara en annan.
-// Måste matcha redirect-URL:en i rules.json.
+// Change this if the friends feed URL ever turns out to be different.
+// Must match the redirect URL in rules.json.
 const TARGET = "https://www.facebook.com/?filter=friends&sk=h_chr";
 
-// Sant om URL:en är Facebooks "Hem" — dvs roten utan vänfiltret.
+// True if the URL is Facebook's "Home" — i.e. the root without the friends filter.
 function isBareHome(urlString) {
   let url;
   try {
@@ -15,9 +15,9 @@ function isBareHome(urlString) {
   return url.searchParams.get("filter") !== "friends";
 }
 
-// DNR-reglerna fångar bara riktiga sidladdningar. Facebook är en SPA:
-// klick på hem-ikonen gör history.pushState, ingen ny request. Den här
-// lyssnaren fångar just de fallen.
+// The DNR rules only catch real page loads. Facebook is an SPA: clicking
+// the home icon calls history.pushState, issuing no new request. This
+// listener catches exactly those cases.
 chrome.webNavigation.onHistoryStateUpdated.addListener(
   (details) => {
     if (details.frameId !== 0) return;
