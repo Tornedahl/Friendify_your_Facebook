@@ -16,7 +16,7 @@
   "declarative_net_request": {
     "rule_resources": [
       {
-        "id": "vanflode",
+        "id": "friends-feed",
         "enabled": true,
         "path": "rules.json"
       }
