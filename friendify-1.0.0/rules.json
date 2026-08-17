@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://www.facebook.com/?filter=friends&sk=h_chr"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://(www\\.|m\\.)?facebook\\.com/(\\?.*)?$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": { "type": "allow" },
+    "condition": {
+      "regexFilter": "^https://(www\\.|m\\.)?facebook\\.com/\\?filter=friends",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
